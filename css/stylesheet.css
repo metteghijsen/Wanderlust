@@ -6,15 +6,21 @@
     font-family: Montserrat;
     src: url("../fonts/Montserrat-Regular.ttf")
 }
+
 @font-face {
-    font-family: Montserrat-bold;
+    font-family: Montserrat-Semibold;
+    src: url("../fonts/Montserrat-SemiBold.ttf")
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
     src: url("../fonts/Montserrat-Bold.ttf")
 }
 
 html body {
     margin: 0;
     padding: 0;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
 }
 
 /* NAVBAR */
@@ -60,6 +66,7 @@ html body {
 #brand {
     height: 2rem;
     margin-right: 0.5rem;
+    margin-top: -0.5rem;
 }
 #navbar-profile-picture {
     max-height: 2rem;
@@ -68,6 +75,7 @@ html body {
 }
 .navbar-profile-name {
     color: white;
+    font-family: Montserrat-SemiBold, sans-serif;
 }
 
 /* FOOTER */
@@ -86,17 +94,23 @@ html body {
     height: 5rem;
 }
 .footer .footer-icon {
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     color: #7F7F7F;
 }
 .footer .footer-icon-text {
+    font-family: Montserrat-Bold, sans-serif;
     color: #7F7F7F;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    margin-bottom: 0.8rem;
 }
-.footer .active {
+.footer .active-icon {
     color: #18813A !important;
 }
+
+.footer .active-text{
+    color: black !important;
+}
+
 @media screen and (max-width: 600px) {
     .footer {
         display: flex !important;
