@@ -1,0 +1,75 @@
+body {
+    font-family: Montserrat;
+    font-size: 20px;
+    color: #2E2E2E;
+}
+html, body {
+    height: 100%;
+}
+.topnav {
+    background-color: unset;
+    z-index: 2;
+}
+.bold {
+    font-weight: 700;
+}
+.font-30 {
+    font-size: 30px;
+}
+.font-25 {
+    font-size: 25px;
+}
+.font-20 {
+    font-size: 20px;
+}
+.font-10 {
+    font-size: 10px;
+}
+.font-18 {
+    font-size: 18px;
+}
+.color-white {
+    color: white;
+}
+.underline {
+    text-decoration: underline;
+}
+.link {
+    color: #45BF55;
+}
+.banner {
+    position: absolute;
+    background-image: url("../img/weert-kerk.png");
+    background-size: cover;
+    height: 40%;
+    width: 100%;
+    top: 0;
+}
+.dark-overlay {
+    background-color: rgba(0,0,0,0.6);
+    height: 100%;
+    width: 100%;
+}
+.menu-bar {
+    background-color: #45BF55;
+    height: 42px;
+}
+.green-button {
+    z-index: 5;
+    transform: translateX(-50%);
+    left: 50%;
+    text-align: center;
+    position: absolute;
+    bottom: 6rem;
+    background-color: #18813A;
+    border-radius: 50rem;
+    width: 40%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#gallery-tab img {
+    width: 100%;
+    height: 100%;
+}
