@@ -3,7 +3,7 @@ const cacheName="Wanderlust_cache";
 const appFiles=[
     "./",
     "manifest.json",
-    "js/script.js",
+    "js/registration.js",
     "css/stylesheet.css",
     "img/icons/icon-192x192.png",
     "img/icons/icon-256x256.png",

@@ -1,0 +1,134 @@
+@font-face {
+    font-family: Bebas;
+    src: url("../fonts/BebasNeue-Regular.ttf")
+}
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-Regular.ttf")
+}
+
+@font-face {
+    font-family: Montserrat-Semibold;
+    src: url("../fonts/Montserrat-SemiBold.ttf")
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url("../fonts/Montserrat-Bold.ttf")
+}
+
+html body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+/* NAVBAR */
+.topnav {
+    overflow: hidden;
+    background-color: #18813A;
+    position: relative;
+}
+.topnav a:hover {
+    text-decoration: unset;
+    color: white;
+}
+/* hidden links */
+.topnav #navbar-links {
+    display: none;
+    transition: 0.5s ease all;
+}
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+#navbar-links a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* hamburger icon */
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0.3rem;
+}
+/* brand and text styling */
+.navbar-word-brand {
+    color: white !important;
+    font-family: Bebas;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+#brand {
+    height: 2rem;
+    margin-right: 0.5rem;
+    margin-top: -0.5rem;
+}
+#navbar-profile-picture {
+    max-height: 2rem;
+    border-radius: 10rem;
+    right: 0;
+}
+.navbar-profile-name {
+    color: white;
+    font-family: Montserrat-SemiBold, sans-serif;
+}
+
+/* FOOTER */
+.footer {
+    display: none !important;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    box-shadow: 0 0 0.5rem #7F7F7F;
+    color: white;
+    text-align: center;
+    height: 5rem;
+}
+.footer .footer-icon {
+    font-size: 1.9rem;
+    color: #7F7F7F;
+}
+.footer .footer-icon-text {
+    font-family: Montserrat-Bold, sans-serif;
+    color: #7F7F7F;
+    font-size: 0.75rem;
+    margin-bottom: 0.8rem;
+}
+.footer .active-icon {
+    color: #18813A !important;
+}
+
+.footer .active-text{
+    color: black !important;
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        display: flex !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
