@@ -1,41 +1,9 @@
-body {
-    font-family: Montserrat;
-    font-size: 20px;
-    color: #2E2E2E;
-}
 html, body {
     height: 100%;
 }
 .topnav {
     background-color: unset;
     z-index: 2;
-}
-.bold {
-    font-weight: 700;
-}
-.font-30 {
-    font-size: 30px;
-}
-.font-25 {
-    font-size: 25px;
-}
-.font-20 {
-    font-size: 20px;
-}
-.font-10 {
-    font-size: 10px;
-}
-.font-18 {
-    font-size: 18px;
-}
-.color-white {
-    color: white;
-}
-.underline {
-    text-decoration: underline;
-}
-.link {
-    color: #45BF55;
 }
 .banner {
     position: absolute;
