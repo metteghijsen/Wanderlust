@@ -5,11 +5,21 @@ const cameraElement = document.querySelector("#camera-element");
 const actionButtons = document.querySelector("#action-buttons")
 const deleteButton = document.querySelector("#remove-button");
 const saveButton = document.querySelector("#save-button");
+const cameraOptions = document.querySelector('.video-options>select');
 
 //kijken of de browser van de gebruiker de mediaDevices API support
 if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
     console.log("Let's get this party started")
 }
+
+const getCameraSelection = async () => {
+    const devices = await navigator.mediaDevices.enumerateDevices();
+    const videoDevices = devices.filter(device => device.kind === 'videoinput');
+    const options = videoDevices.map(videoDevice => {
+        return `<option value="${videoDevice.deviceId}">${videoDevice.label}</option>`;
+    });
+    cameraOptions.innerHTML = options.join('');
+};
 
 //Vragen om toestemming voor het gebruiken van de camera
 navigator.mediaDevices.getUserMedia({video: true}
@@ -19,12 +29,12 @@ navigator.mediaDevices.getUserMedia({video: true}
     const canvasElement = document.createElement("canvas");
     const canvasElementContext = canvasElement.getContext("2d");
 
-    captureButton.addEventListener("click", ()=>{
+    captureButton.addEventListener("click", () => {
         canvasElement.height = video.videoHeight;
         canvasElement.width = video.videoWidth;
 
-        canvasElementContext.scale(-1,1);
-        canvasElementContext.drawImage(video, 0,0, video.videoWidth*-1, video.videoHeight);
+        canvasElementContext.scale(-1, 1);
+        canvasElementContext.drawImage(video, 0, 0, video.videoWidth * -1, video.videoHeight);
 
         cameraElement.appendChild(canvasElement);
         video.style.display = "none";
@@ -32,7 +42,7 @@ navigator.mediaDevices.getUserMedia({video: true}
         actionButtons.style.display = "flex";
     })
 
-    deleteButton.addEventListener("click",()=>{
+    deleteButton.addEventListener("click", () => {
         let text = "Are you sure you want to delete your image?";
         if (confirm(text) === true) {
             video.style.display = "flex";
@@ -43,7 +53,7 @@ navigator.mediaDevices.getUserMedia({video: true}
         }
     })
 
-    saveButton.addEventListener("click", ()=>{
+    saveButton.addEventListener("click", () => {
         let text = "Do you want to download your image?";
         if (confirm(text) === true) {
             const image = canvasElement.toDataURL('image/png');
@@ -51,7 +61,7 @@ navigator.mediaDevices.getUserMedia({video: true}
 
             const timestamp = new Date().getTime()
             link.href = image;
-            link.download = 'image_'+timestamp+'.png';
+            link.download = 'image_' + timestamp + '.png';
             link.click();
 
             video.style.display = "flex";
@@ -59,11 +69,10 @@ navigator.mediaDevices.getUserMedia({video: true}
             actionButtons.style.display = "none";
 
             cameraElement.removeChild(canvasElement);
-            canvasElementContext.clearRect(0,0, video.videoWidth*-1, video.videoHeight);
+            canvasElementContext.clearRect(0, 0, video.videoWidth * -1, video.videoHeight);
         }
     })
 })
 
-navigator.mediaDevices.enumerateDevices().then(devices =>{
-    console.log(devices)
-})
+getCameraSelection();
+

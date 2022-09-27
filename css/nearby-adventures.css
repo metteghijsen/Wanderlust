@@ -1,21 +1,21 @@
-/*@font-face {*/
-/*    font-family: Bebas;*/
-/*    src: url("../fonts/BebasNeue-Regular.ttf")*/
-/*}*/
-/*@font-face {*/
-/*    font-family: Montserrat;*/
-/*    src: url("../fonts/Montserrat-Regular.ttf")*/
-/*}*/
+@font-face {
+    font-family: Bebas;
+    src: url("../fonts/BebasNeue-Regular.ttf")
+}
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-Regular.ttf")
+}
 
-/*@font-face {*/
-/*    font-family: Montserrat-Semibold;*/
-/*    src: url("../fonts/Montserrat-SemiBold.ttf")*/
-/*}*/
+@font-face {
+    font-family: Montserrat-Semibold;
+    src: url("../fonts/Montserrat-SemiBold.ttf")
+}
 
-/*@font-face {*/
-/*    font-family: Montserrat-Bold;*/
-/*    src: url("../fonts/Montserrat-Bold.ttf")*/
-/*}*/
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url("../fonts/Montserrat-Bold.ttf")
+}
 
 .container{
     display: flex;

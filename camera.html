@@ -14,66 +14,87 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/camera.css">
 </head>
 <body>
 <!-- Top Navigation Menu -->
-<div class="topnav">
-  <div class="row-md-12 d-flex align-items-center justify-content-between">
-    <a href="index.html"><img alt="Logo of the Wanderlust app" src="img/icons/logo.png" id="brand"><span
-            class="navbar-word-brand">WANDERLUST</span></a>
-    <div style="margin-right: 5rem;">
-      <img id="navbar-profile-picture" alt="Placeholder profile picture" src="img/profile.jpg">
-      <span class="navbar-profile-name">Mette</span>
-    </div>
-  </div>
-  <!-- Navigation links (hidden by default) -->
-  <div id="navbar-links">
-    <a href="">News</a>
-    <a href="">Contact</a>
-    <a href="">About</a>
-  </div>
-  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-  <a href="javascript:void(0);" class="icon" onclick="navbarHamburger()">
-        <span class="material-icons">
-menu
-</span>
-  </a>
-</div>
+<!--<div class="topnav">-->
+<!--  <div class="row-md-12 d-flex align-items-center justify-content-between">-->
+<!--    <a href="index.html"><img alt="Logo of the Wanderlust app" src="img/icons/logo.png" id="brand"><span-->
+<!--            class="navbar-word-brand">WANDERLUST</span></a>-->
+<!--    <div style="margin-right: 5rem;">-->
+<!--      <img id="navbar-profile-picture" alt="Placeholder profile picture" src="img/profile.jpg">-->
+<!--      <span class="navbar-profile-name">Mette</span>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  &lt;!&ndash; Navigation links (hidden by default) &ndash;&gt;-->
+<!--  <div id="navbar-links">-->
+<!--    <a href="">News</a>-->
+<!--    <a href="">Contact</a>-->
+<!--    <a href="">About</a>-->
+<!--  </div>-->
+<!--  &lt;!&ndash; "Hamburger menu" / "Bar icon" to toggle the navigation links &ndash;&gt;-->
+<!--  <a href="javascript:void(0);" class="icon" onclick="navbarHamburger()">-->
+<!--        <span class="material-icons">-->
+<!--menu-->
+<!--</span>-->
+<!--  </a>-->
+<!--</div>-->
 
+<!--Main content-->
 <div class="container">
+    <div class="video-options">
+        <select id="select">
+            <option></option>
+        </select>
+    </div>
+
     <div class="camera-element" id="camera-element">
         <video id="video" autoplay></video>
         <button id="snap"><i class="bi bi-camera-fill"></i></button>
     </div>
+
+    <div class="buttons-container" id="action-buttons" style="display: none">
+        <p class="title">Do you want to download <br> your picture?</p>
+        <div class="buttons" id="buttonGroup">
+            <div id="remove-button" class="button trash">
+                <p>No</p>
+            </div>
+            <div id="save-button" class="button save">
+                <p>Yes</p>
+            </div>
+        </div>
+    </div>
 </div>
+<script src="js/camera.js"></script>
 
 <!-- footer menu -->
-<div class="row-md-12 footer align-items-end justify-content-around">
-  <a href="" class="col d-flex flex-column">
-        <span class="material-icons footer-icon">
-account_circle
-</span>
-    <span class="footer-icon-text">Me</span>
-  </a>
-  <a href="" class="col d-flex flex-column">
-        <span class="material-icons footer-icon">
-people
-</span>
-    <span class="footer-icon-text">Activity</span>
-  </a>
-  <a href="" class="col d-flex flex-column">
-        <span class="material-icons footer-icon">
-search
-</span>
-    <span class="footer-icon-text">Explore</span>
-  </a>
-  <a href="" class="col d-flex flex-column">
-        <span class="material-icons footer-icon">
-notifications
-</span>
-    <span class="footer-icon-text">Notifications</span>
-  </a>
-</div>
+<!--<div class="row-md-12 footer align-items-end justify-content-around">-->
+<!--  <a href="" class="col d-flex flex-column">-->
+<!--        <span class="material-icons footer-icon">-->
+<!--account_circle-->
+<!--</span>-->
+<!--    <span class="footer-icon-text">Me</span>-->
+<!--  </a>-->
+<!--  <a href="" class="col d-flex flex-column">-->
+<!--        <span class="material-icons footer-icon">-->
+<!--people-->
+<!--</span>-->
+<!--    <span class="footer-icon-text">Activity</span>-->
+<!--  </a>-->
+<!--  <a href="" class="col d-flex flex-column">-->
+<!--        <span class="material-icons footer-icon">-->
+<!--search-->
+<!--</span>-->
+<!--    <span class="footer-icon-text">Explore</span>-->
+<!--  </a>-->
+<!--  <a href="" class="col d-flex flex-column">-->
+<!--        <span class="material-icons footer-icon">-->
+<!--notifications-->
+<!--</span>-->
+<!--    <span class="footer-icon-text">Notifications</span>-->
+<!--  </a>-->
+<!--</div>-->
 
 <script src="js/javascript.js"></script>
 <script src="js/registration.js"></script>
