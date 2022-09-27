@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+}
+.topnav {
+    background-color: unset;
+    z-index: 2;
+}
+.banner {
+    position: absolute;
+    background-image: url("../img/weert-kerk.png");
+    background-size: cover;
+    height: 40%;
+    width: 100%;
+    top: 0;
+}
+.dark-overlay {
+    background-color: rgba(0,0,0,0.6);
+    height: 100%;
+    width: 100%;
+}
+.menu-bar {
+    background-color: #45BF55;
+    height: 42px;
+}
+.green-button {
+    z-index: 5;
+    transform: translateX(-50%);
+    left: 50%;
+    text-align: center;
+    position: absolute;
+    bottom: 6rem;
+    background-color: #18813A;
+    border-radius: 50rem;
+    width: 40%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#gallery-tab img {
+    width: 100%;
+    height: 100%;
+}
